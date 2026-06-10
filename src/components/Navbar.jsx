@@ -15,7 +15,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div clssName="flex-center gap-3">
+        <div className="flex-center gap-3">
           <button>
             <img src="../public/search (1).svg" alt="Search" />
           </button>

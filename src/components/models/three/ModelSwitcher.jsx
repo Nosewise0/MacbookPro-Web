@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import MacbookModel16 from "../Macbook-16.jsx";
 import MacbookModel14 from "../Macbook-14.jsx";
+import { Scene } from "three";
 
 const ANIMATION_DURATION = 1;
 const OFFSET_DISTANCE = 5;
@@ -27,10 +28,13 @@ const moveGroup = (group, x) => {
 };
 
 function ModelSwitcher({ scale, isMobile }) {
+  const SCALE_LARGE_DESKTOP = 0.08;
+  const SCALE_LARGE_MOBILE = 0.05;
+
   const smallMacbookRef = useRef();
   const largeMacbookRef = useRef();
 
-  const showLargeMacbook = scale === 0.08 || scale === 0.05;
+   const showLargeMacbook = scale === SCALE_LARGE_DESKTOP || scale === SCALE_LARGE_MOBILE;
 
   useGSAP(() => {
     if (showLargeMacbook) {
@@ -53,6 +57,7 @@ function ModelSwitcher({ scale, isMobile }) {
     speed: 1,
     zoom: 1,
     azimuth: [-Infinity, Infinity],
+    config: { mass: 1, tension: 0, friction: 26 },
   };
 
   return (

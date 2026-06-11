@@ -19,7 +19,7 @@ function ProductViewer() {
 
       <div className="controls">
         <p>
-          Macbook Pro {scale} in {color}{" "}
+          Macbook Pro | Available in 14" & 16" in Space Gray & Dark colors
         </p>
 
         <div className="flex-center gap-5 mt-5">

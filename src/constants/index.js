@@ -1,8 +1,8 @@
 const navLinks = [
      { name: "Home", href: "#" },
-     { name: "About", href: "#" },
-    { name: "Store", href: "#" },
-    { name: "Contact", href: "#" }
+     { name: "iPhone", href: "#" },
+    { name: "iPad", href: "#" },
+    { name: "Macbook", href: "#" }
 ];
 
 export { navLinks };
